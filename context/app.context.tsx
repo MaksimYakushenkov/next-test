@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, PropsWithChildren, useState } from "react";
 import { MenuItem } from "../interfaces/menu.interface";
 import { PageCategory } from "../interfaces/page.interface";
 
@@ -9,7 +9,9 @@ export interface AppContextInterface {
 }
 export const AppContext = createContext<AppContextInterface>({ menu: [], firstCategory: PageCategory.Courses });
 
-export const AppContextProvider = ({ menu, firstCategory, children }: AppContextInterface & { children: ReactNode }): JSX.Element => {
+
+// PropsWithChildren более изящная запись контектста с чилдрен
+export const AppContextProvider = ({ menu, firstCategory, children }: PropsWithChildren<AppContextInterface>): JSX.Element => {
 const [menuState, setMenuState] = useState<MenuItem[]>(menu);
 const setMenu = (newMenu: MenuItem[]) => {
     setMenuState(newMenu);
