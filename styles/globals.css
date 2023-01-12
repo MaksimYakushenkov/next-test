@@ -30,3 +30,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+.advantages__lastP {
+  margin-top: 30px;
+}

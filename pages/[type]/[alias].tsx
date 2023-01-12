@@ -11,17 +11,20 @@ import { PageCategory, PageModel } from '../../interfaces/page.interface';
 import { ParsedUrlQuery } from 'querystring';
 import { ProductModel } from '../../interfaces/product.interface';
 import { firstLevelMenu } from '../../helpers/helpers';
+import { TopPageComponent } from '../../page-components';
 
-function Course({menu, page, products}: CourseProps): JSX.Element {
+function TopPage({firstCategory, page, products}: TopPageProps): JSX.Element {
 
   return (
-    <>
-    {products && products.length}
-    </>
+    <TopPageComponent
+    firstCategory={firstCategory}
+    page={page}
+    products={products}
+    />
   );
 }
 
-export default withLayout(Course);
+export default withLayout(TopPage);
 
 export const getStaticPaths = async() => {
     let paths: string[]= [];
@@ -37,7 +40,7 @@ export const getStaticPaths = async() => {
     };
 };
 
-export const getStaticProps: GetStaticProps<CourseProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
+export const getStaticProps: GetStaticProps<TopPageProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
   if(!params) {
       return {
           notFound: true
@@ -62,7 +65,7 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({ params }: Ge
       };
     }
     const { data: page } = await axios.get<PageModel>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/byAlias/' + params.alias);
-    const { data: products } = await axios.post<ProductModel>(process.env.NEXT_PUBLIC_DOMAIN + '/api/product/find', {
+    const { data: products } = await axios.post<ProductModel[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/product/find', {
         category: page.category,
         limit: 10
     });
@@ -83,9 +86,9 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({ params }: Ge
   }
 };
 
-interface CourseProps extends Record<string, unknown> {
+interface TopPageProps extends Record<string, unknown> {
     menu: MenuItem[];
     firstCategory: PageCategory;
     page: PageModel;
-    products: ProductModel;
+    products: ProductModel[];
 }
