@@ -10,7 +10,7 @@ export const Skills = ({tags, ...props}: SkillsProps): JSX.Element => {
       <div className={styles.wrapper} {...props}>
         <Htag tag='h2'>Получаемые навыки</Htag>
         <div className={styles.skills}>
-          {tags.map(tag => <Tag size='regular' color='primary'>{tag}</Tag>)}
+          {tags.map(tag => <Tag size='regular' color='primary' key={tag}>{tag}</Tag>)}
         </div>
       </div>
     );

@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
+import { PageAdvantage } from "../../interfaces/page.interface";
 
-export interface AdvantagesProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  children?: ReactNode;
+export interface AdvantagesProps {
+  advantages?: PageAdvantage[];
 }

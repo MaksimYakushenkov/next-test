@@ -2,8 +2,5 @@
   display: grid;
   gap: 20px;
   margin-left: 34px;
-}
-
-.logo {
-  margin-top: 34px;
+  align-content: start;
 }

@@ -54,7 +54,7 @@ export interface PageModel {
     metaTitle: string;
     metaDescription: string;
     firstCategory: PageCategory;
-    advantages: PageAdvantage[];
+    advantages?: PageAdvantage[];
     createdAt: Date;
     updatedAt: Date;
     __v: number;
