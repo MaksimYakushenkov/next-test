@@ -15,4 +15,4 @@ export const Ptag = ({fontSize = 'regular', children, className, ...props}: Ptag
             {children}
         </p>
     );
-}
+};

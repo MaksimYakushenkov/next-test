@@ -8,6 +8,7 @@
 	border-radius: 5px;
 	font-size: 14px;
 	transition: all 0.3s;
+  font-family: var(--font-family);
 }
 
 .primary {

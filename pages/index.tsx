@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from '@next/font/google';
-import { Button, Htag, Ptag, Rating, Tag} from '../components';
+import { Button, Htag, Input, Ptag, Rating, Tag, Textarea} from '../components';
 import { useEffect, useState } from 'react';
 import { withLayout } from '../layout/Layout';
 
@@ -28,6 +28,8 @@ function Home({menu}: HomeProps): JSX.Element {
     <Tag size='large' color='green'>Green</Tag>
     <Tag size='large' color='primary' href='#'>Href Primary</Tag>
     <Rating rating={rating} setRating={setRating} isEditable />
+    <Input placeholder='Имя'/>
+    <Textarea placeholder='Имя'/>
     </>
   );
 }

@@ -4,6 +4,7 @@
   align-items: baseline;
   justify-items: start;
   gap: 19px;
+  margin-bottom: 60px;
 }
 
 .hhTitle {
@@ -19,4 +20,11 @@
   display: flex;
   gap: 30px;
   flex-direction: column;
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    grid-template-columns: auto 1fr;
+    padding: 0 20px;
+  }
 }

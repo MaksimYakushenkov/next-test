@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 export const Tag = ({size = 'regular', color, href, children, className, ...props}: TagProps): JSX.Element => {
     return(
-        <p
+        <span
         className={cn(styles.tag, className, {
             [styles.regular]: size == 'regular',
             [styles.large]: size == 'large',
@@ -23,6 +23,6 @@ export const Tag = ({size = 'regular', color, href, children, className, ...prop
                 :
                 <>{children}</>
             }
-        </p>
+        </span>
     );
 }
