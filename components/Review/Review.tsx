@@ -8,11 +8,13 @@ import ru from 'date-fns/locale/ru';
 
 import UserIcon from './user.svg';
 import { Rating } from '../Rating/Rating';
+import { Divider } from '../Divider/Divider';
 
 export const Review = ({review, className, ...props}: ReviewProps): JSX.Element => {
   const {name, title, description, createdAt, rating, } = review;
 
     return(
+      <>
       <div className={cn(styles.review, className)}>
         <UserIcon className={styles.icon} />
         <div className={styles.title}>
@@ -23,5 +25,8 @@ export const Review = ({review, className, ...props}: ReviewProps): JSX.Element 
         <div className={styles.rating}><Rating rating={rating}/></div>
         <div className={styles.description}>{description}</div>
       </div>
+      <Divider />
+      </>
+
     );
 }

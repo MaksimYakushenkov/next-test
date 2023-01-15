@@ -68,7 +68,7 @@ export const Menu = (): JSX.Element => {
     return (
       pages.map(page => (
         <Link key={page._id} href={`/${route}/${page.alias}`} className={cn(styles.thirdLevel, {
-          [styles.thirdLevelActive]: `/${route}/${page.alias}` == router.asPath
+          [styles.thirdLevelActive]: `/${route}/${page.alias}` == router.asPath && `/${route}/${page.alias}/#viewReview` == router.asPath
         })}>
             {page.category}
         </Link>

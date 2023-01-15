@@ -3,15 +3,21 @@ import styles from './TopPageComponent.module.css';
 import { Advantages, Card, HhData, Htag, Product, Skills, Sort, Tag } from "../../components";
 import { PageCategory } from "../../interfaces/page.interface";
 import { SortEnum } from "../../components/Sort/Sort.props";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { sortReducer } from "./sort.reducer";
 
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps): JSX.Element => {
+
     const [{ products: sortedProducts, sort}, dispathSort] = useReducer(sortReducer, { products, sort: SortEnum.Rating });
 
     const setSort = (sort: SortEnum) => {
       dispathSort({ type: sort });
     };
+
+    //Для перерендера продуктов
+    useEffect(() => {
+      dispathSort({ type: 'reset', initialState: products });
+    }, [products]);
 
     return(
       <div className={styles.wrapper}>
