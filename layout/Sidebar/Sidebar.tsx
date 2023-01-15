@@ -10,8 +10,8 @@ export const Sidebar = ({className, ...props }: SidebarProps): JSX.Element => {
     return(
         <div className={cn(className, styles.sidebar)} {...props}>
           <LogoIcon className={styles.logo} />
-            <Search />
-            <Menu />
+          <Search />
+          <Menu />
         </div>
     );
 };

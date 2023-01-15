@@ -160,11 +160,8 @@
 }
 
 .reviews {
-  padding: 20px;
-}
-
-.opened {
-  max-height: auto;
+  overflow: hidden;
+  padding: 30px;
 }
 
 .closed {

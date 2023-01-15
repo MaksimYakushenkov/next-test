@@ -4,11 +4,13 @@ import ArrowIcon from './arrow.svg';
 
 //чтобы задать классы
 import cn from 'classnames';
+import { motion } from "framer-motion";
 
 //чтобы задать дефолтное значение пропса, нужно прописать здесь props = value
 export const Button = ({ appearance, children, arrow = 'none', className, ...props }: ButtonProps): JSX.Element => {
     return(
-        <button
+        <motion.button
+        whileHover={{ scale: 1.05 }}
         className={cn(styles.button, className, {
             [styles.primary]: appearance == 'primary',
             [styles.ghost]: appearance == 'ghost'
@@ -21,6 +23,6 @@ export const Button = ({ appearance, children, arrow = 'none', className, ...pro
                 [styles.right]: arrow == 'right',
             })}><ArrowIcon /></span>}
             
-        </button>
+        </motion.button>
     );
 };
