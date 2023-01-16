@@ -4,4 +4,5 @@ services:
     image: first-test
     container_name: first-test
     restart: always
-    ports: ["3000:3000"]
+    ports: 
+      - 3000:3000
