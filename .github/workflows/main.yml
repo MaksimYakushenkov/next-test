@@ -1,8 +1,6 @@
 name: Publish Doker
 
-on: 
-  push: [main]
-    branches: [main]
+on: [push]
 
 jobs:
   build:
