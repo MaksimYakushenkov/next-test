@@ -3,12 +3,12 @@
 	box-sizing: border-box;
 	padding: 10px;
 	cursor: pointer;
+	transition: all 0.3s;
 	text-align: center;
 	border: none;
 	border-radius: 5px;
+	font-family: var(--font-family);
 	font-size: 14px;
-	transition: all 0.3s;
-  font-family: var(--font-family);
 }
 
 .primary {
@@ -22,13 +22,13 @@
 
 .ghost {
 	color: var(--black);
-	background: none;
 	border: 1px solid var(--gray-light);
+	background: none;
 }
 
 .ghost:hover {
-	background-color: var(--primary-hover);
 	color: var(--white);
+	background-color: var(--primary-hover);
 }
 
 .arrow {

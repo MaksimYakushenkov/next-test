@@ -7,44 +7,44 @@
 
 .regular {
 	padding: 5px 10px;
-	font-weight: 500;
 	font-size: 12px;
+	font-weight: 500;
 	line-height: 12px;
 }
 
 .large {
 	padding: 5px 10px;
-	font-weight: 600;
 	font-size: 14px;
+	font-weight: 600;
 	line-height: 16px;
 }
 
 .ghost {
-	background: none;
 	border: 1px solid var(--gray-light);
+	background: none;
 }
 
 .red {
-	background: #DE0000;
 	color: var(--white);
-	font-weight: 600;
+	background: #DE0000;
 	font-size: 14px;
+	font-weight: 600;
 	line-height: 19px;
 }
 
 .grey {
-	background: #B3C0D9;
 	color: var(--white);
+	background: #B3C0D9;
 }
 
 .green {
-	background: var(--green-light);
 	color: var(--green);
+	background: var(--green-light);
 	font-weight: bold;
 }
 
 .primary {
 	color: var(--primary);
-	background: none;
 	border: 1px solid var(--primary);
+	background: none;
 }

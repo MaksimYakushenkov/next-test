@@ -1,13 +1,13 @@
 :root {
 	--black: #3B434E;
-  --gray: #A4A4A4;
+	--gray: #A4A4A4;
 	--gray-light: #EBEBEB;
 	--gray-dark: #787D85;
 	--white: #FFF;
 	--primary: #7653FC;
 	--primary-hover: #4F26F3;
 	--red: #FC836D;
-	--red-light: #fdccc4;
+	--red-light: #FDCCC4;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
 	--font-family: "Noto Sans", sans-serif;
@@ -34,5 +34,5 @@ a {
 }
 
 .advantages__lastP {
-  margin-top: 30px;
+	margin-top: 30px;
 }

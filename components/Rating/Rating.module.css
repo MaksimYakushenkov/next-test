@@ -1,5 +1,5 @@
 .ratingContainer {
-  position: relative;
+	position: relative;
 }
 
 .filled {
@@ -7,8 +7,8 @@
 }
 
 .star {
-	margin-right: 5px;
 	display: inline-block;
+	margin-right: 5px;
 }
 
 .editable {
@@ -16,14 +16,14 @@
 }
 
 .errorMessage {
-  position: absolute;
-  bottom: -20px;
-  left: -10px;
-  color: var(--red);
-  font-weight: bold;
-  white-space: nowrap;
+	position: absolute;
+	bottom: -20px;
+	left: -10px;
+	white-space: nowrap;
+	color: var(--red);
+	font-weight: bold;
 }
 
 .error svg {
-  stroke: var(--red);
+	stroke: var(--red);
 }

@@ -1,30 +1,30 @@
 .title {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: baseline;
-  justify-items: start;
-  gap: 19px;
-  margin-bottom: 60px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: baseline;
+	justify-items: start;
+	gap: 19px;
+	margin-bottom: 60px;
 }
 
 .hhTitle {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: baseline;
-  justify-items: start;
-  gap: 19px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: baseline;
+	justify-items: start;
+	gap: 19px;
 }
 
 .seoText {
-  margin-top: 30px;
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
+	margin-top: 30px;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
 }
 
 @media screen and (max-width: 640px) {
-  .title {
-    grid-template-columns: auto 1fr;
-    padding: 0 20px;
-  }
+	.title {
+		grid-template-columns: auto 1fr;
+		padding: 0 20px;
+	}
 }
