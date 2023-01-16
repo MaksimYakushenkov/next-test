@@ -20,4 +20,4 @@ export const AdvantageItem = ({title, className, children, ...props}: AdvantageI
           </div>
         </div>
     );
-}
+};

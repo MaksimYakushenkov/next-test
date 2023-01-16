@@ -1,7 +1,6 @@
 import { SkillsProps } from './Skills.props';
 import styles from './Skills.module.css';
 
-import cn from 'classnames';
 import { Htag } from '../Htag/Htag';
 import { Tag } from '../Tag/Tag';
 
@@ -14,4 +13,4 @@ export const Skills = ({tags, ...props}: SkillsProps): JSX.Element => {
         </div>
       </div>
     );
-}
+};

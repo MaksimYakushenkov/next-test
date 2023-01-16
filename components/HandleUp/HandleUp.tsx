@@ -1,12 +1,8 @@
 import styles from './HandleUp.module.css';
-
-import UpIcon from './up.svg';
 import { useScrollY } from '../../hooks/useScrollY';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon';
-
-
 
 export const HandleUp = (): JSX.Element => {
   const controls = useAnimation();

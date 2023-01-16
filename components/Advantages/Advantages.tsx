@@ -13,4 +13,4 @@ export const Advantages = ({ advantages }: AdvantagesProps): JSX.Element => {
         {advantages?.map(advantage => <AdvantageItem title={advantage.title} key={advantage._id}>{advantage.description}</AdvantageItem>)}
       </div>
     );
-}
+};

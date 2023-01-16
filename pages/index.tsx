@@ -1,8 +1,5 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import { Button, Htag, Input, Ptag, Rating, Tag, Textarea} from '../components';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { withLayout } from '../layout/Layout';
 
 // Библиотека для http запросов
@@ -14,7 +11,7 @@ import { GetStaticProps } from 'next';
 import { API } from '../helpers/api';
 
 
-function Home({menu}: HomeProps): JSX.Element {
+function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(3);
 
   return (

@@ -25,4 +25,4 @@ export const Tag = ({size = 'regular', color, href, children, className, ...prop
             }
         </span>
     );
-}
+};

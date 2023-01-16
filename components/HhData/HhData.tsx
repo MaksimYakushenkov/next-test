@@ -43,4 +43,4 @@ export const HhData = ({ count, juniorSalary, middleSalary, seniorSalary }: HhDa
         </Card>
       </div>
     );
-}
+};

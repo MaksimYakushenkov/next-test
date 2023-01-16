@@ -31,4 +31,4 @@ export const Sort = ({ sort, setSort, className, ...props }: SortProps): JSX.Ele
         </span>
       </div>
     );
-}
+};

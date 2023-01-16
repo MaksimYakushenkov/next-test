@@ -1,7 +1,6 @@
 import { ReviewProps } from './Review.props';
 import styles from './Review.module.css';
 import cn from 'classnames';
-import { Card } from '../Card/Card';
 
 import { format } from 'date-fns';
 import ru from 'date-fns/locale/ru';
@@ -15,7 +14,7 @@ export const Review = ({review, className, ...props}: ReviewProps): JSX.Element 
 
     return(
       <>
-      <div className={cn(styles.review, className)}>
+      <div className={cn(styles.review, className)} {...props}>
         <UserIcon className={styles.icon} />
         <div className={styles.title}>
           <span className={styles.name}>{name}:&nbsp;&nbsp;</span>
@@ -29,4 +28,4 @@ export const Review = ({review, className, ...props}: ReviewProps): JSX.Element 
       </>
 
     );
-}
+};

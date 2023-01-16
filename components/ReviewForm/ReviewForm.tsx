@@ -83,4 +83,4 @@ export const ReviewForm = ({productId, className, ...props}: ReviewFormProps): J
         </div>}
       </form>
     );
-}
+};

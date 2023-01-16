@@ -5,7 +5,7 @@ import axios from 'axios';
 
 // Обязательные интерфейсы для получения данных из API
 import { MenuItem } from '../../interfaces/menu.interface';
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { PageCategory, PageModel } from '../../interfaces/page.interface';
 import { ParsedUrlQuery } from 'querystring';
 import { ProductModel } from '../../interfaces/product.interface';
