@@ -15,7 +15,7 @@ export default function App({ Component, pageProps, router }: AppProps): JSX.Ele
 
   return <>
   <Head>
-    <title>Тест НЕКСТJS</title>
+    <title>Тест NextJS</title>
     <meta name="description" content="Первое некст джиес" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://mc.yandex.ru"/>
