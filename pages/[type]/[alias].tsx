@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { withLayout } from '../../layout/Layout';
 
 // Библиотека для http запросов
@@ -19,18 +18,23 @@ function TopPage({firstCategory, page, products}: TopPageProps): JSX.Element {
 
   return (
     <>
-    <Head>
-      <title>{page.title}</title>
-      <meta name='description' content={page.metaDescription} />
-      <meta property='og:title' content={page.title} />
-      <meta property='og:description' content={page.metaDescription} />
-      <meta property='og:type' content='article' />
-    </Head>
-    <TopPageComponent
-    firstCategory={firstCategory}
-    page={page}
-    products={products}
-    />
+      {
+        page && products && 
+        <>
+          <Head>
+            <title>{page.title}</title>
+            <meta name='description' content={page.metaDescription} />
+            <meta property='og:title' content={page.title} />
+            <meta property='og:description' content={page.metaDescription} />
+            <meta property='og:type' content='article' />
+          </Head>
+          <TopPageComponent
+          firstCategory={firstCategory}
+          page={page}
+          products={products}
+          />
+        </>
+      }
     </>
   );
 }

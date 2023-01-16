@@ -99,7 +99,7 @@ export const Menu = (): JSX.Element => {
       pages.map(page => (
         <motion.div key={page._id} variants={variantsChildren}>
           <Link  href={`/${route}/${page.alias}`} className={cn(styles.thirdLevel, {
-            [styles.thirdLevelActive]: `/${route}/${page.alias}` == router.asPath && `/${route}/${page.alias}/#viewReview` == router.asPath
+            [styles.thirdLevelActive]: `/${route}/${page.alias}` == router.asPath || `/${route}/${page.alias}/#viewReview` == router.asPath
           })}>
               {page.category}
           </Link>
