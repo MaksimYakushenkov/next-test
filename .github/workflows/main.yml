@@ -1,21 +1,13 @@
-name: Publish Doker
-
-on: 
-  push: [main]
-    branches: [main]
-
+name: Publish Docker
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout/@master
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          registry: docker.pkg.github.com
-          name: docker.pkg.github.com/MaksimYakushenkov/next-test/next-test
-          username: ${{ secrets.DOKER_NAME }}
-          password: ${{ secrets.DOKER_PASSWORD }}
-          tags: "develop"
-
-
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      with:
+        name: MaksimYakushenkov/next-test/
+        username: ${{ secrets.DOKER_NAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
