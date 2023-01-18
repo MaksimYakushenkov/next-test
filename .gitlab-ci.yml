@@ -1,0 +1,15 @@
+stages:
+  - deploy
+cache:
+  paths:
+    - node_modules/
+deploy:
+  image: docker:dind
+  stage: deploy
+  script:
+    - docker build -t app/next-nest .
+    - docker run -d -p 3000:3000 --rm --name next-test app/next-nest
+  tags:
+    - docker
+  only:
+    - master
